@@ -5,62 +5,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="bulma.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <style>
       body {
-      background:url("bgg.jpg");
+      background:url("bg.jpg");
+      color: whitesmoke;
       }
-      h1 {
-      margin-top: -70px;
-      padding-top: 20px;
-      padding-bottom: 24px;
-      padding-left: 45px;
-      padding-right: 45px;
-      background: ghostwhite;
-      border-radius: 5px;
-      color: dimgrey;
+      .profile {
+      width: 100%;
+      margin-top: -30px;
+      padding-top: 23px;
+      padding-bottom: 28px;
+      padding-left: 40px;
+      padding-right: 40px;
+      background: rgba(60,60,60,0.1);
+      border-radius: 9px;
       font-size: 19px;
-      box-shadow: 0 0 6.3px white;
+      box-shadow: 0 0 5px rgb(155,130,130);
+      }
+      .aboutme {
+      width: 100%;
+      margin-top: -25px;
+      padding-top: 7px;
+      padding-bottom: 5px;
+      padding-left: 30px;
+      padding-right: 30px;
+      background: rgba(60,60,60,0.1);
+      border-radius: 9px;
+      font-size: 19px;
+      box-shadow: 0 0 5px rgb(155,130,130);
+      }
+      .skills {
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 40px;
+      padding-right: 40px;
+      background: rgba(60,60,60,0.1);
+      border-radius: 9px;
+      font-size: 19px;
+      box-shadow: 0 0 5px rgb(155,130,130);
       }
       i {
-      color: dimgrey;
+      color: whitesmoke;
       }
       ul {
       font-size:15px;
       }
       .profpic {
-      border-radius:50px;
-      box-shadow:0 0 4px black;
-      }
-      .social {
-      color: white;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border-radius:75px;
+      box-shadow: 0 0 5px rgb(180,160,160);
       }
       p {
-      font-size: 14px;
-      }
+      font-size: 15px;
+	  }
+	  .brand {
+	  font-size: 21px;
+	  padding-top: 22px;
+	  }
+	  .navbar {
+	  background: rgba(125,125,125,0.2);
+	  box-shadow: 0 0 12px rgb(80,80,80);
+	  top: -21px;
+	  }
+	  .navbar-toggler {
+	  width:45px;
+	  height: 45px;
+	  border-radius:25px;
+	  border-width: 1.5px;
+	  margin-top: 18px;
+	  margin-bottom: -3.5px;
+	  }
+	  .titel {
+	  text-shadow: 0 0 5px;
+	  }
+	  .container {
+	  margin-top: -20px;
+	  padding-left:23px;
+	  padding-right:23px;
+	  }
+	  progress {
+	  width:100%;
+	  margin-top: -15px;
+	  }
+	  .columns p {
+	  margin-top: -10px;
+	  }
+	  .columns h5 {
+	  margin-bottom: 15px;
+	  }
+	  .suka i {
+	  color:whitesmoke;
+	  }
+	  .fab {
+	  color:white;
+	  }
+	  .is-mobile {
+	  margin-left: 30px;
+	  margin-right: 30px;
+	  }
+	  h5 {
+	  text-shadow: 0 0 2.5px white;
+	  }
+	  h6 {
+	  font-size: 14.6px;
+	  }
     </style>
   </head>
-  <body>
+  <body id="page-top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  	<div class="container-fluid">
+  	  <b><a class="brand titel navbar-brand" href="#page-top">Syahrul</a></b>
+  	  <div class="navbar-burger navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  	  <span></span>
+  	  <span></span>
+  	  <span></span>
+  	  </div>
+  	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		<ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll">
+  		  <li class="nav-item">
+  			<a class="nav-link" aria-current="page" href="#page-top">Home</a>
+  		  </li>
+  		  <li class="nav-item">
+  			<a class="nav-link" href="#aboutme">About me</a>
+  		  </li>
+  		  <li class="nav-item">
+  		  	<a class="nav-link" href="#skills">Skills</a>
+  		  </li>
+  		</ul>
+  	  </div>
+  	</div>
+  </nav>
+  <!-- /. Navbar -->
+  
+  <!-- Section first -->
   <section class="hero is-fullheight">
   	<div class="hero-body" style="justify-content:center;">
-      <h1 align="center">
-      	<img class="profpic" src="profpic.jpg" width="100px">
+      <div class="profile" align="center">
+      	<img class="profpic" src="profpic.jpg" width="150px">
         <br>
-        <b>Syahrul Romadon</b>
-        <p>Saya adalah seorang pelajar yang berada di sekolah menegah kejuruan. 
-        Tahun ini saya berumur 19 tahun. Saya bertempat tinggal di Ngamprah, Kabupaten Bandung Barat.</p>
+        <b class="titel">Syahrul Romadon</b>
+        <p>A student, a brother, a good boy.</p>
       	<br>
-      	<div class="container">
-      	<nav class="pagination is-rounded is-centered" role="navigation">
-      	<ul class="pagination-list">
-      	<li><a href="https://github.com/chaeryu" class="pagination-link"><i class="fab fa-github"></i></a></li>
-      	<li><a href="https://twitter.com/Syrlrmdn05?t=1BJM132Hf1FJNb-jJVekyQ&s=08" class="pagination-link"><i class="fab fa-twitter"></i></a></li>
-      	<li><a href="https://www.instagram.com/dlwlrndr/" class="pagination-link"><i class="fab fa-instagram"></i></a></li>
-      	</ul>
-      	</nav>
+      	<div class="container">  
+      	  <nav class="pagination is-rounded is-centered" role="navigation">
+      		<li><a href="https://github.com/chaeryu" class="pagination-link text-decoration-none"><i class="fab fa-github"></i></a></li>
+      		<li><a href="https://twitter.com/Syrlrmdn05?t=1BJM132Hf1FJNb-jJVekyQ&s=08" class="pagination-link text-decoration-none"><i class="fab fa-twitter"></i></a></li>
+      		<li><a href="https://instagram.com/dlwlrndr/" class="pagination-link text-decoration-none"><i class="fab fa-instagram"></i></a></li>
+      	  </nav>
       	</div>
-      </h1>
+      </div>
     </div>
   </section>
+  <!-- /. Section first -->
+  
+  <!-- Section two -->
+  <section id="aboutme" class="hero is-fullheight">
+  	<div class="hero-body" style="justify-content:center;">
+  	  <div class="aboutme" align="center">
+  	  	<br>
+  	  	<h1 class="titel mb-3"><b>About Me</b></h1>
+  	  	<p>Saya adalah seorang laki-laki yang tahun ini berusia 19 tahun.</p> 
+  	  	<h5 class="mb-2">My Interests</h5>
+  	  	<div class="columns is-mobile">
+  	  	  <div class="column">
+  	  	  	<h6>Music</h6>
+  	  	  	<nav class="suka pagination">
+  	  	  		<li class="pagination-link" ><i class="fas fa-headphones"></i></li>
+  	  	  	</nav>
+  	  	  </div>
+  	  	  <div class="column">
+  	  	  	<h6>Games</h6>
+  	  	  	<nav class="suka pagination">
+  	  	  	  <li class="pagination-link"><i class="fas fa-gamepad"></i></li>
+  	  	  	</nav>
+  	  	  </div>
+  	  	</div>
+  	  	<div class="columns is-mobile">
+  	  	  <div class="column">
+  	  		<h6>Leaf</h6>
+  	  		<nav class="suka pagination">
+  	  		  <li class="pagination-link" ><i class="fas fa-leaf"></i></li>
+  	  		</nav>
+  	  	  </div>
+  	  	  <div class="column">
+  	  		<h6>Money</h6>
+  	  		<nav class="suka pagination">
+  	  		  <li class="pagination-link"><i class="fas fa-money-bill-wave"></i></li>
+  	  		</nav>
+  	  	  </div>
+  	  	</div>
+  	  	<br>
+  	  </div>
+  	</div>
+  </section>
+  <!-- /. Section two -->
+  
+  <!-- Section three -->
+  <section id="skills" class="hero is-fullheight">
+  	<div class="hero-body" style="justify-content:center;">
+  	  <div class="skills" align="center">
+  		<br>
+  		<h1 class="titel mb-3"><b>Skills</b></h1>
+  		<div class="columns">
+  		  <div class="column">
+  		  	<h5>Technical Skills</h5>
+  		  	<p>HTML & CSS</p>
+  		  	<progress class="progress-bar progress is-small is-danger" value="75" max="100">75%</progress>
+  		  	<p>PHP</p>
+  		  	<progress class="progress-bar progress is-small is-danger" value="45" max="100">45%</progress>
+  		  </div>
+  		  <div class="column">
+  		  	<h5>Professional Skills</h5>
+  		  	<p>Communication</p>
+  		  	<progress class="progress-bar progress is-small is-danger" value="65" max="100">65%</progress>
+  		  	<p>Creativity</p>
+  		  	<progress class="progress-bar progress is-small is-danger" value="85" max="100">85%</progress>
+  		  	<p>Teamwork</p>
+  		  	<progress class="progress-bar progress is-small is-danger" value="70" max="100">70%</progress>
+  		  </div>
+  		</div>
+  		<br>
+  	  </div>
+  	</div>
+  </section>
+  <!-- /. Section three -->
+ 
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  	// Get all "navbar-burger" elements
+  	const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+  	// Check if there are any navbar burgers
+  	if ($navbarBurgers.length > 0) {
+  	  // Add a click event on each of them
+  	  $navbarBurgers.forEach( el => {
+  	  	el.addEventListener('click', () => {
+  	  	// Get the target from the "data-target" attribute
+  	  	const target = el.dataset.target;
+  	 	 // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+  	  	el.classList.toggle('is-active');
+  
+  		});
+  	  });
+  	}
+  });
+  </script>
+  
+  <!-- Main Script -->
+  <script src="bootstrap.bundle.min.js"></script>
   </body>
 </html>
