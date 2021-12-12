@@ -12,11 +12,11 @@ color: var(--secondary);
 }
 .profile {
 width: 100%;
-margin-top: -30px;
+margin-top: 5px;
 padding-top: 23px;
 padding-bottom: 28px;
-padding-left: 40px;
-padding-right: 40px;
+padding-left: 35px;
+padding-right: 35px;
 background: rgba(105,105,105,0.1);
 border-radius: 9px;
 font-size: 19px;
