@@ -1,6 +1,17 @@
 :root {
 --primary: rgb(0,240,240); /*cyan*/
---secondary: rgb(225,85,220); /*pink*/
+--secondary: rgb(245,85,240); /*pink*/
+--warning: rgb(255,255,0); /*yellow*/
+}
+
+// Text Selection
+::-moz-selection { /* Code for Firefox */
+  color: #defe47;
+  background: rgb(220,65,255);
+}
+::selection {
+  color: #defe47;
+  background: rgb(220,65,255);
 }
 
 body {
@@ -8,13 +19,13 @@ font-family: "Lucida Console", "Courier New", monospace;
 background: url("bg.jpg");
 background-size: cover;
 background-attachment: fixed;
-color: var(--secondary);
+color: rgb(200,190,80);
 }
 .profile {
 width: 100%;
-margin-top: 5px;
-padding-top: 23px;
-padding-bottom: 28px;
+margin-top: 12px;
+padding-top: 30px;
+padding-bottom: 34px;
 padding-left: 35px;
 padding-right: 35px;
 background: rgba(105,105,105,0.1);
@@ -26,8 +37,8 @@ backdrop-filter:blur( 2px );
 }
 .aboutme {
 width: 100%;
-margin-top: -25px;
-padding-top: 7px;
+margin-top: 24px;
+padding-top: 9px;
 padding-bottom: 5px;
 padding-left: 30px;
 padding-right: 30px;
@@ -40,7 +51,8 @@ backdrop-filter:blur( 2px );
 }
 .skills {
 width: 100%;
-padding-top: 5px;
+margin-top: 23px;
+padding-top: 7px;
 padding-bottom: 5px;
 padding-left: 40px;
 padding-right: 40px;
@@ -58,7 +70,7 @@ font-size:15px;
 margin-top: 5px;
 margin-bottom: 10px;
 border-radius:75px;
-box-shadow: 0 0 5px rgb(180,160,160);
+box-shadow: 0px 0px 6.5px #defe47;
 }
 p {
 font-size: 15px;
@@ -69,8 +81,8 @@ font-size: 21px;
 padding-top: 22px;
 }
 .navbar {
-background: rgba(100,60,80,0.2);
-box-shadow: 0 0 14px rgb(255,80,240);
+background: rgba(100,100,100,0.2);
+box-shadow: 0 0 14px rgb(255,0,255);
 top: -21px;
 backdrop-filter:blur( 1.6px );
 -webkit-backdrop-filter:blur( 1.6px );
@@ -80,15 +92,15 @@ background: rgba(0,115,115,0.2);
 width:43px;
 height: 43px;
 border-radius:25px;
-border-width: 0.2px;
+border-width: 0.1px;
 margin-top: 18px;
 margin-bottom: -3.5px;
 }
 .navbar-toggler:hover {
-background: rgba(145, 73, 94, 0.2);
+background: rgba(145, 145, 0, 0.2);
 }
 .navbar-toggler:active {
-background: fuchsia;
+background: deeppink;
 }
 .span1 {
 color: #defe47;
@@ -103,8 +115,7 @@ color: var(--primary);
 color: rgb(0,255,255);
 }
 .text-shadow {
-color: #defe47;
-text-shadow: 0 0 5px white;
+color: var(--secondary);
 }
 .text-shadow-title {
 color: var(--primary);
@@ -126,7 +137,7 @@ margin-top: -10px;
 margin-bottom: 15px;
 }
 i {
-color: var(--primary);
+color: var(--warning);
 }
 .is-mobile {
 margin-left: 30px;
@@ -155,16 +166,16 @@ line-height: 45px;
 color: #fff;
 }
 .scroll-to-top:hover {
-background: rgba(180, 83, 114, 0.2);
+background: rgba(180, 183, 0, 0.2);
 }
 .scroll-to-top:active {
-background: fuchsia;
+background: deeppink;
 }
 .scroll-to-top i:active {
 color: rgb(0,255,255);
 }
 .scroll-to-top i {
-color: #defe47;
+color: var(--secondary);
 font-weight: 800;
 margin-top: 14px;
 }
@@ -173,17 +184,29 @@ margin-top: 14px;
 border-color: var(--primary);
 }
 .pagination-link:hover {
-border-color: var(--secondary);
+border-color: var(--warning);
 }
 .pagination-link:active {
-border-color: #defe47;
+border-color: var(--secondary);
 }
 
 footer {
+margin-top: 6rem;
 background: rgba(0,100,100,0.2);
 backdrop-filter:blur(1.2px);
-box-shadow: 0 0 7px 0 rgb(0,255,255);
+box-shadow: 0 0 12px var(--primary);
 }
 footer a {
 font-style: italic;
+}
+
+.hr {
+color: var(--secondary);
+width: 40px;
+padding: 1px;
+}
+.hrs {
+color: var(--warning);
+width: 40px;
+padding: 1px;
 }
