@@ -4,134 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Bulma -->
     <link rel="stylesheet" href="bulma.min.css">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap.min.css">
-    <style>
-      body {
-      background:url("bg.jpg");
-      color: whitesmoke;
-      }
-      .profile {
-      width: 100%;
-      margin-top: -30px;
-      padding-top: 23px;
-      padding-bottom: 28px;
-      padding-left: 40px;
-      padding-right: 40px;
-      background: rgba(75,75,75,0.1);
-      border-radius: 9px;
-      font-size: 19px;
-      box-shadow: 0 0 5px rgb(155,130,130);
-      backdrop-filter:blur( 0.5px );
-      -webkit-backdrop-filter:blur( 0.5px );
-      }
-      .aboutme {
-      width: 100%;
-      margin-top: -25px;
-      padding-top: 7px;
-      padding-bottom: 5px;
-      padding-left: 30px;
-      padding-right: 30px;
-      background: rgba(75,75,75,0.1);
-      border-radius: 9px;
-      font-size: 19px;
-      box-shadow: 0 0 5px rgb(155,130,130);
-      backdrop-filter:blur( 0.5px );
-      -webkit-backdrop-filter:blur( 0.5px );
-      }
-      .skills {
-      width: 100%;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 40px;
-      padding-right: 40px;
-      background: rgba(75,75,75,0.1);
-      border-radius: 9px;
-      font-size: 19px;
-      box-shadow: 0 0 5px rgb(155,130,130);
-      backdrop-filter:blur( 0.5px );
-      -webkit-backdrop-filter:blur( 0.5px );
-      }
-      i {
-      color: whitesmoke;
-      }
-      ul {
-      font-size:15px;
-      }
-      .profpic {
-      margin-top: 5px;
-      margin-bottom: 10px;
-      border-radius:75px;
-      box-shadow: 0 0 5px rgb(180,160,160);
-      }
-      p {
-      font-size: 15px;
-	  }
-	  .brand {
-	  font-size: 21px;
-	  padding-top: 22px;
-	  }
-	  .navbar {
-	  background: rgba(115,115,115,0.2);
-	  box-shadow: 0 0 12px rgb(80,80,80);
-	  top: -21px;
-	  backdrop-filter:blur( 1.6px );
-	  -webkit-backdrop-filter:blur( 1.6px );
-	  }
-	  .navbar-toggler {
-	  width:45px;
-	  height: 45px;
-	  border-radius:25px;
-	  border-width: 1.5px;
-	  margin-top: 18px;
-	  margin-bottom: -3.5px;
-	  }
-	  .titel {
-	  text-shadow: 0 0 5px;
-	  }
-	  .container {
-	  margin-top: -20px;
-	  padding-left:23px;
-	  padding-right:23px;
-	  }
-	  progress {
-	  width:100%;
-	  margin-top: -15px;
-	  }
-	  .columns p {
-	  margin-top: -10px;
-	  }
-	  .columns h5 {
-	  margin-bottom: 15px;
-	  }
-	  .suka i {
-	  color:whitesmoke;
-	  }
-	  .fab {
-	  color:white;
-	  }
-	  .is-mobile {
-	  margin-left: 30px;
-	  margin-right: 30px;
-	  }
-	  h5 {
-	  text-shadow: 0 0 2.5px white;
-	  }
-	  h6 {
-	  font-size: 14.6px;
-	  }
-    </style>
+    <!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
   </head>
   <body id="page-top">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   	<div class="container-fluid">
-  	  <b><a class="brand titel navbar-brand" href="#page-top">Syahrul</a></b>
+  	  <b><a class="brand navbar-brand" href="#page-top">Syahrul</a></b>
   	  <div class="navbar-burger navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  	  <span></span>
-  	  <span></span>
-  	  <span></span>
+  	  <span class="span1" ></span>
+  	  <span class="span2" ></span>
+  	  <span class="span3" ></span>
   	  </div>
   	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
   		<ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll">
@@ -150,13 +40,13 @@
   </nav>
   <!-- /. Navbar -->
   
-  <!-- Section first -->
+  <!-- Header -->
   <section class="hero is-fullheight">
-  	<div class="hero-body" style="justify-content:center;">
+  	<div class="hero-body">
       <div class="profile" align="center">
       	<img class="profpic" src="profpic.jpg" width="150px">
         <br>
-        <b class="titel">Syahrul Romadon</b>
+        <b class="text-shadow-title">Syahrul Romadon</b>
         <p>A student, a brother, a good boy.</p>
       	<br>
       	<div class="container">  
@@ -169,16 +59,16 @@
       </div>
     </div>
   </section>
-  <!-- /. Section first -->
+  <!-- /. Header -->
   
-  <!-- Section two -->
+  <!-- About -->
   <section id="aboutme" class="hero is-fullheight">
-  	<div class="hero-body" style="justify-content:center;">
+  	<div class="hero-body">
   	  <div class="aboutme" align="center">
   	  	<br>
-  	  	<h1 class="titel mb-3"><b>About Me</b></h1>
-  	  	<p>Saya adalah seorang laki-laki yang tahun ini berusia 19 tahun.</p> 
-  	  	<h5 class="mb-2">My Interests</h5>
+  	  	<h1 class="text-shadow-title mb-3"><b>About Me</b></h1>
+  	  	<p>Saya adalah seorang laki-laki yang lahir pada tahun 2002.</p> 
+  	  	<h5 class="mb-2 text-shadow">My Interests</h5>
   	  	<div class="columns is-mobile">
   	  	  <div class="column">
   	  	  	<h6>Music</h6>
@@ -195,9 +85,9 @@
   	  	</div>
   	  	<div class="columns is-mobile">
   	  	  <div class="column">
-  	  		<h6>Leaf</h6>
+  	  		<h6>Sleep</h6>
   	  		<nav class="suka pagination">
-  	  		  <li class="pagination-link" ><i class="fas fa-leaf"></i></li>
+  	  		  <li class="pagination-link" ><i class="fas fa-bed"></i></li>
   	  		</nav>
   	  	  </div>
   	  	  <div class="column">
@@ -211,60 +101,59 @@
   	  </div>
   	</div>
   </section>
-  <!-- /. Section two -->
+  <!-- /. About -->
   
-  <!-- Section three -->
+  <!-- Skills -->
   <section id="skills" class="hero is-fullheight">
-  	<div class="hero-body" style="justify-content:center;">
+  	<div class="hero-body">
   	  <div class="skills" align="center">
   		<br>
-  		<h1 class="titel mb-3"><b>Skills</b></h1>
+  		<h1 class="text-shadow-title mb-3"><b>Skills</b></h1>
   		<div class="columns">
   		  <div class="column">
-  		  	<h5>Technical Skills</h5>
+  		  	<h5 class="text-shadow">Technical Skills</h5>
   		  	<p>HTML & CSS</p>
-  		  	<progress class="progress-bar progress is-small is-danger" value="75" max="100">75%</progress>
+  		  	<div class="progress" style="height:12px;">
+  		  	  <div class="progress-bar bg-info" role="progressbar" style="width: 86%;" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">86%</div>
+  		  	</div>
   		  	<p>PHP</p>
-  		  	<progress class="progress-bar progress is-small is-danger" value="45" max="100">45%</progress>
+  		  	<div class="progress" style="height:12px;">
+  		  	  <div class="progress-bar bg-info" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+  		  	</div>
   		  </div>
   		  <div class="column">
-  		  	<h5>Professional Skills</h5>
+  		  	<h5 class="text-shadow">Professional Skills</h5>
   		  	<p>Communication</p>
-  		  	<progress class="progress-bar progress is-small is-danger" value="65" max="100">65%</progress>
+  		  	<div class="progress" style="height:12px;">
+  		  	  <div class="progress-bar bg-info" role="progressbar" style="width: 48%;" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100">48%</div>
+  		  	</div>
   		  	<p>Creativity</p>
-  		  	<progress class="progress-bar progress is-small is-danger" value="85" max="100">85%</progress>
+  		  	<div class="progress" style="height:12px;">
+  		  	  <div class="progress-bar bg-info" role="progressbar" style="width: 96%;" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">96%</div>
+  		  	</div>
   		  	<p>Teamwork</p>
-  		  	<progress class="progress-bar progress is-small is-danger" value="70" max="100">70%</progress>
+  		  	<div class="progress" style="height:12px;">
+  		  	  <div class="progress-bar bg-info" role="progressbar" style="width: 73%;" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100">73%</div>
+  		  	</div>
   		  </div>
   		</div>
   		<br>
   	  </div>
   	</div>
   </section>
-  <!-- /. Section three -->
+  <!-- /. Skills -->
+  
+  <footer class="mt-5 pt-4 pl-5 pb-4">
+  	  Created by <a href="https://instagram.com/dlwlrndr/" class="text-decoration-none">Syahrul</a><br>
+  	  Background by <a href="https://www.freepik.com/vectors/background" class="text-decoration-none">Freepik</a>
+  </footer>
+  
+  <!-- Scroll to Top Button-->
+  <a id="myBtn" onclick="topFunction()" class="scroll-to-top rounded-circle" href="#page-top"><i class="fas fa-angle-up"></i></a>
  
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  	// Get all "navbar-burger" elements
-  	const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
-  	// Check if there are any navbar burgers
-  	if ($navbarBurgers.length > 0) {
-  	  // Add a click event on each of them
-  	  $navbarBurgers.forEach( el => {
-  	  	el.addEventListener('click', () => {
-  	  	// Get the target from the "data-target" attribute
-  	  	const target = el.dataset.target;
-  	 	 // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-  	  	el.classList.toggle('is-active');
-  
-  		});
-  	  });
-  	}
-  });
-  </script>
-  
-  <!-- Main Script -->
+  <!-- My Script -->
+  <script src="scripts.js"></script>
+  <!-- Bootstrap Script -->
   <script src="bootstrap.bundle.min.js"></script>
   </body>
 </html>
