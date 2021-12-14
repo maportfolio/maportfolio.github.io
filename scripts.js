@@ -1,3 +1,4 @@
+// Navbar burger
 document.addEventListener('DOMContentLoaded', () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -37,3 +38,30 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// Type effect
+;(function() {
+
+'use strict';
+
+var element, string, length;
+
+element = document.querySelector('.screen');
+string  = element.innerText;
+length  = string.length;
+
+function timer(delay, repetitions) {
+var n, i;
+
+n = 0;
+i = window.setInterval(function () {
+element.innerText = string.substring(0, n);
+if (n++ === repetitions) {
+window.clearInterval(i);
+}
+}, delay);
+}
+
+timer(185, length);
+
+})();
