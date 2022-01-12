@@ -16,6 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	  });
 	});
   }
+  
+  // Collapse responsive navbar when toggler is visible
+  const navbarToggler = document.body.querySelector('.navbar-toggler');
+  const responsiveNavItems = [].slice.call(
+    document.querySelectorAll('.col .nav-link')
+  );
+  responsiveNavItems.map(function (responsiveNavItem) {
+    responsiveNavItem.addEventListener('click', () => {
+  	  if (window.getComputedStyle(navbarToggler).display !== 'none') {
+  	  	navbarToggler.click();
+  	  }
+    });
+  });
+
 });
   
 // Scroll to top
@@ -41,27 +55,26 @@ function topFunction() {
 
 // Type effect
 ;(function() {
+  'use strict';
 
-'use strict';
+  var element, string, length;
 
-var element, string, length;
+  element = document.querySelector('.screen');
+  string  = element.innerText;
+  length  = string.length;
 
-element = document.querySelector('.screen');
-string  = element.innerText;
-length  = string.length;
+  function timer(delay, repetitions) {
+	var n, i;
+	
+	n = 0;
+	i = window.setInterval(function () {
+	  element.innerText = string.substring(0, n);
+	  if (n++ === repetitions) {
+	  window.clearInterval(i);
+	  }
+	}, delay);
+  }
 
-function timer(delay, repetitions) {
-var n, i;
-
-n = 0;
-i = window.setInterval(function () {
-element.innerText = string.substring(0, n);
-if (n++ === repetitions) {
-window.clearInterval(i);
-}
-}, delay);
-}
-
-timer(185, length);
+  timer(185, length);
 
 })();
