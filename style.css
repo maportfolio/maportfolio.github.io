@@ -25,12 +25,19 @@
   font-weight: 400;
   src: url("cyberpunk.ttf");
 }
+@font-face {
+  font-family: 'Teko-Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url("Teko-Light.ttf");
+}
 
 body {
+//font-family: "Teko", monospace;
+font-family: "Teko-Light", "Lucida Console", "Courier New", monospace;
 margin: 0;
 padding: 0;
-letter-spacing: 1.1px;
-font-family: "Lucida Console", "Courier New", monospace;
+letter-spacing: 5.1px;
 background: url("bg.jpg");
 background-size: cover;
 background-repeat: no-repeat;
@@ -39,6 +46,7 @@ color: var(--pink);
 }
 
 .profile {
+letter-spacing: 4px;
 width: 100%;
 margin-top: 40px;
 padding-top: 40px;
@@ -48,7 +56,7 @@ padding-right: 28px;
 background: rgba(0,255,255,0.1);
 border: 2px solid var(--primary);
 border-radius: 9px;
-// font-size: 19px;
+font-size: 17px;
 box-shadow: 0 0 8px lightblue, 0 0 18px var(--primary);
 // box-shadow: 10px 10px 10px var(--primary);
 backdrop-filter:blur( 3px );
@@ -67,7 +75,7 @@ padding-bottom: 4rem;
 padding-left: 30px;
 padding-right: 30px;
 background: rgba(0,255,255,0.1);
-font-size: 19px;
+font-size: 17px;
 border: 2px solid var(--primary);
 border-radius: 9px;
 box-shadow: 0 0 8px lightblue, 0 0 18px var(--primary);
@@ -76,6 +84,7 @@ z-index: 4;
 }
 
 .skills {
+letter-spacing: 4.1px;
 width: 100%;
 margin-top: 40px;
 padding-top: 2.5rem;
@@ -83,11 +92,11 @@ padding-bottom: 4rem;
 padding-left: 30px;
 padding-right: 30px;
 background: rgba(0,255,255,0.1);
-font-size: 19px;
+font-size: 17px;
 border: 2px solid var(--primary);
 border-radius: 9px;
 box-shadow: 0 0 8px lightblue, 0 0 18px var(--primary);
-backdrop-filter:blur( 3px );
+backdrop-filter: blur( 3px );
 z-index: 4;
 }
 ul {
@@ -103,7 +112,7 @@ box-shadow: 0px 0px 6.5px #defe47;
 }
 
 p {
-font-size: 15px;
+//font-size: 15px;
 text-shadow: -2.5px 0px 0px rgba(255,0,0,0.9);
 }
 
@@ -113,8 +122,9 @@ text-shadow: -2.3px 0px 0px rgba(255,0,0,0.9);
 }
 
 h6 {
+margin-left: 3.5px;
+margin-bottom: 3px;
 text-shadow: -2.5px 0px 0px rgba(255,0,0,0.9);
-font-size: 15px;
 }
 
 .brand {
@@ -135,15 +145,19 @@ backdrop-filter:blur( 4px );
 -webkit-backdrop-filter:blur( 4px );
 }
 .navbar-collapse .a1 {
+letter-spacing: 0;
 font-size: 16px;
 padding-top: 0.72rem;
 padding-bottom: 0.72rem;
 margin-top: 0.7rem;
 }
 .navbar-collapse a {
+letter-spacing: 2.1px;
 margin-top: 0.5rem;
+padding-bottom: 5.2px;
 border: 0.3px solid var(--primary);
 font-weight: bold;
+font-size: 17px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -232,6 +246,8 @@ text-shadow: 0 0 5px white, 2.9px 2px 0px var(--pink);
 }
 
 .name {
+font-size: 16.2px;
+letter-spacing: 1.1px;
 font-family: cyberpunk;
 color: var(--primary);
 text-shadow: 0 0 5px white, 2px 1.5px 0px var(--pink);
@@ -258,9 +274,8 @@ text-shadow: -1.6px 0px 0px rgba(255,0,0,0.9);
 width:100%;
 margin-top: -15px;
 }
-
-.columns p {
-margin-top: -10px;
+.progress-bar {
+padding-top: 2.5px;
 }
 
 .is-mobile {
@@ -269,6 +284,7 @@ margin-right: 20px;
 }
 	  
 .scroll-to-top {
+letter-spacing: 0;
 position: fixed;
 right: 15px;
 bottom: 15px;
@@ -293,16 +309,21 @@ background: rgba(225,50,225,0.25);
 background: deeppink;
 }
 .scroll-to-top i:active {
+margin-top: 20px;
 color: var(--primary);
 }
 .scroll-to-top i {
-color: var(--pink);
+color: var(--primary);
 font-weight: 800;
 margin-top: 15.5px;
 text-shadow: -2.5px 0px 0px rgba(255,0,0,0.9);
 }
+.fa-rocket {
+transform: rotate(-45deg);
+}
 
 .social {
+letter-spacing: 0;
 margin-top: 3px;
 border: 1.2px solid;
 transition: 0.1s;
@@ -322,14 +343,26 @@ border-color: purple;
 border-color: var(--primary);
 }
 .social i {
-font-size: 17px;
-margin-top: 0.9px;
-margin-right: -1.5px;
+font-size: 18.5px;
+margin-left: 0.5px;
 color: var(--primary);
 text-shadow: -2.5px 0px 0px rgba(255,0,0,0.9);
 }
+.li-git {
+margin-right: -14.5px;
+}
+.li-ins {
+margin-left: -14.5px;
+}
+
+.shuka {
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
 .suka {
+letter-spacing: 0;
 border: 1.2px solid;
 border-color: var(--primary);
 }
@@ -340,13 +373,14 @@ border-color: var(--primary);
 border-color: var(--primary);
 }
 .suka i {
+font-size: 17px;
 color: var(--primary);
 text-shadow: -2.5px 0px 0px rgba(255,0,0,0.9);
 }
 
 footer {
-letter-spacing: 0px;
-font-size: 14px;
+letter-spacing: 2px;
+font-size: 16px;
 text-shadow: 0 0 1px var(--pink);
 margin-top: 6rem;
 background: rgba(200,200,200,0.1);
