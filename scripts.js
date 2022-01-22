@@ -106,7 +106,7 @@ for (i = 1; i < 15; i++) {
 	a4.append('<span class=a3'+i+'></span>');
 	setInterval(function() {
 		$('#a4 span').each(function() {
-			$(this).width((Math.random()*15));
+			$(this).width((Math.random()*25));
 		});
 	}, 500);		
 }
@@ -122,8 +122,8 @@ for (i = 1; i < 16; i++) {
 setInterval(function() {
 	var h = Math.ceil(Math.random()*24);
 	var m = Math.ceil(Math.random()*60);
-	if (h<10) {$('.a731').text('0'+h+':');}
-	else {$('.a731').text(h+':');}
+	if (h<10) {$('.a731').text('0'+h+' :');}
+	else {$('.a731').text(h+' :');}
 	if (m<10) {$('.a732').text('0'+m);}
 	else {$('.a732').text(m);}		
 }, 100);
@@ -135,10 +135,10 @@ setInterval(function() {
 	var rand = min - 0.5 + Math.random()*(max-min+1)
 	rand = Math.round(rand);
 
-	if (d<10) {$('.a741').text('0'+d+'/');}
-	else {$('.a741').text(d+'/');}
-	if (m<10) {$('.a742').text('0'+m+'/');}
-	else {$('.a742').text(m+'/');}	
+	if (d<10) {$('.a741').text('0'+d+' /');}
+	else {$('.a741').text(d+' /');}
+	if (m<10) {$('.a742').text('0'+m+' /');}
+	else {$('.a742').text(m+' /');}	
 	$('.a743').text(rand);	
 }, 50);	
 
@@ -181,3 +181,101 @@ for (i = 1; i < 13; i++) {
 		'-webkit-transform' : 'rotateZ('+i*30+'deg) translateY(91px)'
 	}); 		
 }
+
+
+//=============== GLITCH TEXT =================
+const chars = "$@&abcdefghijklmnopqrstuvwxyz";
+
+var Glitch = function(selector, index, numberOfGlitchedLetter, timeGlitch, timePerLetter, timeBetweenGlitch){
+	this.selector = selector;
+	this.index = index;
+	this.numberOfGlitchedLetter = numberOfGlitchedLetter;
+	this.innerText;
+	this.charArray = [];
+	this.charIndex = [];
+	this.timeGlitch = timeGlitch;
+	this.timeBetweenGlitch = timeBetweenGlitch;
+	this.timePerLetter = timePerLetter;
+	this.maxCount = Math.floor(this.timeGlitch/this.timePerLetter);
+	this.count = 0;
+}
+
+Glitch.prototype.init = function(){
+	this.innerText = this.selector.innerText;
+	this.charArray = this.innerText.split("");
+	if(this.numberOfGlitchedLetter == undefined || this.numberOfGlitchedLetter > this.innerText.length){
+		this.numberOfGlitchedLetter = this.innerText.length;
+	}
+	this.defineCharIndexToRandomize();
+}
+
+Glitch.prototype.defineCharIndexToRandomize = function(){
+	this.charIndex = [];
+	for(let i=0; i<this.numberOfGlitchedLetter; i++){
+		let randCharIndex = Math.floor(Math.random() * this.charArray.length);
+		this.charIndex.push(randCharIndex);
+	}
+}
+
+Glitch.prototype.randomize = function(){
+	//copy the char array
+	let randomString = Array.from(this.charArray);
+	
+	//randomize char
+	for(let i=0; i<this.numberOfGlitchedLetter; i++){
+		let randIndex = Math.floor(Math.random() * chars.length);
+		let randCharIndex = this.charIndex[i];
+		if(randomString[randCharIndex] !== ' '){
+			randomString[randCharIndex] = chars[randIndex];
+		}
+	}
+	this.selector.innerText = randomString.join("");
+}
+
+Glitch.prototype.update = function(interval){
+	if(this.count >= this.maxCount - 1){
+		this.selector.innerText = this.innerText;
+		this.defineCharIndexToRandomize();
+		let ctx = this;
+		let wait = setTimeout(function(){
+			ctx.count = 0;
+		}, this.timeBetweenGlitch);
+	}else{
+		this.randomize();
+		this.count ++;
+	}
+}
+
+Glitch.prototype.glitch = function(){
+	let ctx = this;
+	let interval= setInterval(function(){
+        ctx.update(this);
+      },this.timePerLetter);
+}
+
+var arrayElements;
+var glitchArray = [];
+
+function initAllGlitch(){
+	arrayElements = document.querySelectorAll(".content");
+	for(let i=0; i<arrayElements.length; i++){
+		let selector = arrayElements[i];
+		let randLetterNumber = 1 + Math.floor(Math.random() * 0);
+		let randGlitchTime = 1 + Math.floor(Math.random() * 0);
+		let randGlitchPauseTime = 2 + Math.floor(Math.random() * 1000);
+		let glitch = new Glitch(selector, i, randLetterNumber, 800, 100, randGlitchPauseTime);
+		glitch.init();
+		glitchArray.push(glitch);
+	}
+}
+
+
+function update(){
+	for(let i=0; i<glitchArray.length; i++){
+		let glitch = glitchArray[i];
+		glitch.glitch();
+	}
+}
+
+initAllGlitch();
+update();
