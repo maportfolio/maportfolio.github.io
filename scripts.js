@@ -182,8 +182,7 @@ for (i = 1; i < 13; i++) {
 	}); 		
 }
 
-
-//=============== GLITCH TEXT =================
+// Glithy Text
 const chars = "$@&abcdefghijklmnopqrstuvwxyz";
 
 var Glitch = function(selector, index, numberOfGlitchedLetter, timeGlitch, timePerLetter, timeBetweenGlitch){
