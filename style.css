@@ -1,8 +1,7 @@
 :root {
   --dig-count: 22;
   --glitched-duration: 0.9s;
-  --primary: rgb(0,255,255);
-  /*cyan*/
+  --primary: rgb(0,255,255);/*cyan*/
   --pink: rgb(245,85,240);
   --yellow: #f9f002;
   --red: #ff003c;
@@ -14,12 +13,13 @@
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--yellow);
-  background: rgba(120,105,123,0.65);
+  //background: rgba(120,105,123,0.65);
+  background: rgba(220,65,220,0.65);
 }
 ::selection {
   color: var(--yellow);
-  background: rgba(120,105,123,0.65);
-  //background: rgba(220,65,255,0.65);
+  //background: rgba(120,105,123,0.65);
+  background: rgba(220,65,220,0.65);
 }
 
 @font-face {
@@ -410,6 +410,7 @@ pri {
 }
 
 .batas {
+  font-weight: 350;
   margin-bottom: -2rem;
 }
 
