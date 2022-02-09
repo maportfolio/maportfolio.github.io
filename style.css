@@ -161,7 +161,7 @@ pri {
   letter-spacing: 2.1px;
   margin-top: 0.5rem;
   padding-bottom: 5.2px;
-  border: 0.3px solid var(--primary);
+  border: 0.68px solid var(--primary);
   font-weight: bold;
   font-size: 17px;
   display: flex;
