@@ -7,13 +7,14 @@
   --red: #ff003c;
   --blue: #136377;
   --green: #446d44;
+  --text-shadow: rgba(255,0,0,0.9);
 }
 
 .primary {
   color: var(--primary);
 }
 
-pri {
+.pri {
   color: var(--primary);
 }
 
@@ -128,17 +129,17 @@ ul {
 }
 
 p {
-  text-shadow: -2.5px 0 0 rgba(255,0,0,0.9);
+  text-shadow: -2.5px 0 0 var(--text-shadow);
 }
 
 h5 {
   margin-bottom: 15px;
-  text-shadow: -2.3px 0 0 rgba(255,0,0,0.9);
+  text-shadow: -2.3px 0 0 var(--text-shadow);
 }
 
 h6 {
   margin-bottom: 5px;
-  text-shadow: -2.5px 0 0 rgba(255,0,0,0.9);
+  text-shadow: -2.5px 0 0 var(--text-shadow);
 }
 
 .brand {
@@ -271,7 +272,7 @@ h6 {
 }
 
 .name {
-  font-size: 19px;
+  font-size: 21px;
   letter-spacing: 1.7px;
   font-style: italic;
   color: var(--primary);
@@ -306,7 +307,7 @@ h6 {
 
 .progress {
   height: 12px;
-  text-shadow: -1.6px 0 0 rgba(255,0,0,0.9);
+  text-shadow: -1.6px 0 0 var(--text-shadow);
   width: 100%;
   margin-top: -15px;
 }
@@ -356,7 +357,7 @@ h6 {
   color: var(--primary);
   font-weight: 800;
   margin-top: 15.5px;
-  text-shadow: -2.5px 0 0 rgba(255,0,0,0.9);
+  text-shadow: -2.5px 0 0 var(--text-shadow);
 }
 .fa-rocket {
   transform: rotate(-45deg);
@@ -385,7 +386,7 @@ h6 {
   font-size: 18.5px;
   margin-left: 0.5px;
   color: var(--primary);
-  text-shadow: -2.5px 0 0 rgba(255,0,0,0.9);
+  text-shadow: -2.5px 0 0 var(--text-shadow);
 }
 .li-fb {
   margin-right: -14.5px;
@@ -417,7 +418,7 @@ h6 {
 .suka i {
   font-size: 17px;
   color: var(--primary);
-  text-shadow: -2.5px 0 0 rgba(255,0,0,0.9);
+  text-shadow: -2.5px 0 0 var(--text-shadow);
 }
 .suka .i {
   font-size: 16px;
@@ -468,7 +469,7 @@ footer a:hover {
   color: rgb(0,210,210);
 }
 .foot {
-  text-shadow: -2px 0px 0px rgba(255,0,0,0.9);
+  text-shadow: -2px 0px 0px var(--text-shadow);
 }
 .hrfooter {
   margin-top: -6px;
@@ -1013,6 +1014,18 @@ footer a:hover {
 }
 #a76 {
   font-size: 40%;
+}
+
+.glitch {
+  color: var(--primary);
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px var(--primary), -2px -2px deeppink; }
+  20% { text-shadow: -2px 2px var(--primary), 2px -2px deeppink; }
+  40% { text-shadow: 2px -2px var(--primary), -2px 2px deeppink; }
+  60%, 100% { text-shadow: 0 0 var(--primary), 0 0 deeppink; }
 }
 
 // Bottom of css
